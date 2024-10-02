@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <div class="px-8 container mx-auto flex justify-between h-24 items-center">
+    <div class="px-8 container mx-auto flex justify-between h-24 items-center border-b border-base-grey">
         <h1 class="text-base-grey font-semibold text-3xl">Cyber Store</h1>
         <div class="flex gap-x-8">
             <svg class="cursor-pointer hover:fill-base-light-grey" width="28" height="28" viewBox="0 0 28 28" fill="#9FA194" xmlns="http://www.w3.org/2000/svg">
