@@ -29,6 +29,61 @@ export const useHomeStore = defineStore('home', () => {
     const heroCurrentTitle = ref()
     const heroCurrentDescr = ref()
 
+    const categories = reactive([
+        {
+            name: 'Все игры',
+            eng_name: ''
+        },
+        {
+            name: 'Экшены',
+            eng_name: 'action'  
+        },
+        {
+            name: 'Приключенческие игры',
+            eng_name: 'adventure'  
+        },
+        {
+            name: 'Казуальные игры',
+            eng_name: 'casual'  
+        },
+        {
+            name: 'Инди',
+            eng_name: 'indie'  
+        },
+        {
+            name: 'Ролевые игры',
+            eng_name: 'role-playing'  
+        },
+        {
+            name: 'Симуляторы',
+            eng_name: 'simulators'  
+        },
+        {
+            name: 'Стратегии',
+            eng_name: 'strategies'  
+        },
+        {
+            name: 'Многопользовательские игры',
+            eng_name: 'multiplayer'  
+        },
+        {
+            name: 'Ранний доступ',
+            eng_name: 'early_access'  
+        },
+        {
+            name: 'Утилиты',
+            eng_name: 'utilities'  
+        },
+        {
+            name: 'Спортивные игры',
+            eng_name: 'sports'  
+        },
+        {
+            name: 'Гонки',
+            eng_name: 'races'  
+        },
+    ])
+
     const getHeroCurrentTitle = computed(() => {
         heroCurrentTitle.value = heroTabContents.value[heroActiveTab.value].title
         return heroCurrentTitle
@@ -45,7 +100,7 @@ export const useHomeStore = defineStore('home', () => {
         heroCurrentTitle,
         heroCurrentDescr,
         getHeroCurrentTitle,
-        getHeroCurrentDescr
-        // cuurentTabContent
+        getHeroCurrentDescr,
+        categories
     }
 })

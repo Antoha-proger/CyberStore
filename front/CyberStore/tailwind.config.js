@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       spacing:{
-        '600': "37.5rem"
+        '600': "37.5rem",
+        '850': "53.125rem",
+        '1140': "71.25rem"
       }
     },
     colors: {
@@ -17,7 +19,8 @@ export default {
       'base-light-grey': '#C7C9C6',
       'base-grey': '#9FA194',
       'base-brown': '#443927',
-      'base-dark': '#15100A'
+      'base-dark': '#15100A',
+      'white': '#FFFFFF'
     },
     fontFamily: {
       'Playfair': '"Playfair"'
