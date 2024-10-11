@@ -27,7 +27,8 @@ export default {
       'base-grey': '#9FA194',
       'base-brown': '#443927',
       'base-dark': '#15100A',
-      'white': '#FFFFFF'
+      'white': '#FFFFFF',
+      'red': '#FF0000'
     },
     fontFamily: {
       'Playfair': '"Playfair"'
