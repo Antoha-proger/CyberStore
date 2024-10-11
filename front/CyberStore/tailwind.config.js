@@ -9,7 +9,14 @@ export default {
       spacing:{
         '600': "37.5rem",
         '850': "53.125rem",
-        '1140': "71.25rem"
+        '1140': "71.25rem",
+        '420': "26.25rem",
+        '200': "12.5rem",
+        '300': "18.75rem"
+      },
+
+      transitionDelay: {
+        '50': "50ms"
       }
     },
     colors: {
