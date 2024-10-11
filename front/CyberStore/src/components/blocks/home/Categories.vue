@@ -14,8 +14,8 @@ defineProps(['games'])
         <div class=" gap-x-5 flex overflow-hidden overflow-x-scroll pb-3.5 mb-28">
             <CategoryButton v-for="({ name, eng_name }) in homeStore.categories" :key="eng_name" :text="name" :alt_text="eng_name"/>
         </div>
-        <div class="flex overflow-x-scroll gap-x-5 pb-5">
-            <GameCard v-for="items in games" :image="items.image" :title="items.title" :price="items.price"/>
+        <div class="flex overflow-x-scroll overflow-y-hidden gap-x-5 pb-5">
+            <GameCard v-for="items in games" :image="items.header_vertical" :title="items.title" :price="items.price"/>
         </div>
     </div>
 </template>
