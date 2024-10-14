@@ -12,7 +12,11 @@ export default {
         '1140': "71.25rem",
         '420': "26.25rem",
         '200': "12.5rem",
-        '300': "18.75rem"
+        '300': "18.75rem",
+        '100': "6.25rem",
+        '150': "9.375rem",
+        '225': "14.063rem",
+        '350': "21.875rem"
       },
 
       transitionDelay: {
@@ -28,7 +32,8 @@ export default {
       'base-brown': '#443927',
       'base-dark': '#15100A',
       'white': '#FFFFFF',
-      'red': '#FF0000'
+      'red': '#FF0000',
+      'light-grey': '#F5F5F5'
     },
     fontFamily: {
       'Playfair': '"Playfair"'

@@ -2,6 +2,16 @@ import { defineStore } from "pinia";
 import { ref, computed, reactive } from 'vue'
 
 export const useHomeStore = defineStore('home', () => {
+    const isFavouritesMenuOpen = ref(false)
+
+    let favoritesGameList = ref([])
+
+    function addFavoriteGame(game) {
+        favoritesGameList.value.push(game)
+        console.log(favoritesGameList.value);
+        
+    }
+
     let heroActiveTab = ref(0)
 
     const heroTabContents = ref([
@@ -101,6 +111,9 @@ export const useHomeStore = defineStore('home', () => {
         heroCurrentDescr,
         getHeroCurrentTitle,
         getHeroCurrentDescr,
-        categories
+        categories,
+        isFavouritesMenuOpen,
+        favoritesGameList,
+        addFavoriteGame
     }
 })

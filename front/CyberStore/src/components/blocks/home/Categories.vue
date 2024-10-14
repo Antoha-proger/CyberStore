@@ -15,7 +15,7 @@ defineProps(['games'])
             <CategoryButton v-for="({ name, eng_name }) in homeStore.categories" :key="eng_name" :text="name" :alt_text="eng_name"/>
         </div>
         <div class="flex overflow-x-scroll overflow-y-hidden gap-x-5 pb-5">
-            <GameCard v-for="items in games" :image="items.header_vertical" :title="items.title" :price="items.price"/>
+            <GameCard v-for="items in games" :key="items._id" :id="items._id" :image="items.header_vertical" :title="items.title" :price="items.price"/>
         </div>
     </div>
 </template>

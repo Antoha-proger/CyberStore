@@ -8,9 +8,7 @@ export const useGamesStore = defineStore('games', () => {
     async function fetchAll() {
         try {
             const data = await axios.get('http://localhost:3000/games')
-            games.value = await data.data.slice(0, 21)
-            console.log(games.value);
-            
+            games.value = await data.data.slice(0, 21)  
         } catch(err) {
             console.log(err);
             
