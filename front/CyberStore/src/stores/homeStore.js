@@ -7,6 +7,12 @@ export const useHomeStore = defineStore('home', () => {
     let favoritesGameList = ref([])
 
     function addFavoriteGame(game) {
+        for (let item of favoritesGameList.value) {
+            if (game.id === item.id) {
+                favoritesGameList.value = favoritesGameList.value.filter((game) => game !== item)
+                return
+            }
+        }
         favoritesGameList.value.push(game)
         console.log(favoritesGameList.value);
         
