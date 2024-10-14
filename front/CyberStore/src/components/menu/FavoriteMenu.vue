@@ -14,7 +14,7 @@ const homeStore = useHomeStore()
             </div>
         </div>
         <div class="grid gap-y-12 grid-cols-3 pt-4 pl-4" >
-                <GameMenuCard v-for="item in homeStore.favoritesGameList" :key="item._id" :image="item.image" :title="item.title" :price="item.price"/>
+                <GameMenuCard v-for="item in homeStore.favoritesGameList" :key="item.id" :image="item.image" :title="item.title" :price="item.price" :id="item.id"/>
         </div>
     </div>
 </template>

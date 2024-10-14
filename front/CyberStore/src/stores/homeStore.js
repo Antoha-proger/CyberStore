@@ -7,15 +7,28 @@ export const useHomeStore = defineStore('home', () => {
     let favoritesGameList = ref([])
 
     function addFavoriteGame(game) {
+        
         for (let item of favoritesGameList.value) {
             if (game.id === item.id) {
-                favoritesGameList.value = favoritesGameList.value.filter((game) => game !== item)
+                deleteFavoriteGame(game.id)
                 return
             }
         }
+        
         favoritesGameList.value.push(game)
         console.log(favoritesGameList.value);
         
+    }
+
+    function deleteFavoriteGame(id) {
+        console.log(id);
+        
+        for (let item of favoritesGameList.value) {
+            if (id === item.id) {
+                favoritesGameList.value = favoritesGameList.value.filter((point) => point !== item)
+                return
+            }
+        }
     }
 
     let heroActiveTab = ref(0)
@@ -120,6 +133,7 @@ export const useHomeStore = defineStore('home', () => {
         categories,
         isFavouritesMenuOpen,
         favoritesGameList,
-        addFavoriteGame
+        addFavoriteGame,
+        deleteFavoriteGame
     }
 })
